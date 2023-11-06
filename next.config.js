@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    CONTRACT_ADDRESS: "0x8E2384E34D13762B61dc7a4A0f8E5F5fD6119fC6",
+    CONTRACT_ADDRESS: "0xDf4af839a986E475a47B2E338581339795BC9352",
     ABI: [
       {
         "inputs": [
@@ -60,7 +60,15 @@ const nextConfig = {
             "internalType": "string",
             "name": "_tokenSymbol",
             "type": "string"
-          },
+          }
+        ],
+        "name": "addOrganization",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
           {
             "components": [
               {
@@ -84,12 +92,17 @@ const nextConfig = {
                 "type": "uint256"
               }
             ],
-            "internalType": "struct Vest.Stakeholder[]",
-            "name": "_stakeholders",
-            "type": "tuple[]"
+            "internalType": "struct Vest.Stakeholder",
+            "name": "stakeholder",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "orgId",
+            "type": "uint256"
           }
         ],
-        "name": "addOrganization",
+        "name": "addStakeHolder",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -107,9 +120,28 @@ const nextConfig = {
             "type": "uint256"
           }
         ],
-        "name": "claimTokenAsAdmin",
+        "name": "claimToken",
         "outputs": [],
         "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "organizationExist",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
         "type": "function"
       },
       {
