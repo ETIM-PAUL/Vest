@@ -1,40 +1,21 @@
-- Setup NextJS App
-    
-    Create a nextjs app with below command
-    
-    ```bash
-    npx create-next-app storage-frontend
-    ```
-    
-    Add tailwind (to make it simpler to add styling for frontend elements)
-    
-    [https://tailwindcss.com/docs/guides/nextjs](https://tailwindcss.com/docs/guides/nextjs) (Step 2 and 3 from the link)
+# Vest Dapp
+
+A small dapp where organizations are created with stakeholders (who can be whitelisted to claim tokens after a period of time).
+
+## Description
+
+This Dapp allows Organizations to come onboard and add their organizations. Each organization can then proceed to add stakeholders to the organization. A stakeholder can be whitelisted or not to claim tokens after a certain period of time has elapsed. An ERC 20 token is created immediately for each organization each time they register.
 
 
-- Metamask and Network Setup
-    
-    Make sure you installed metamask or other wallet provider.
-    
-    Switch the network to GoerliTestNet
-    
-    Make sure to have some GoerliETH to test the app.
+### Executing program
 
-- Install required dependencies
+Functions like adding or organization, adding stake holders for organization, claiming tokens, getting an organization details by id, etc are available in the Dapp.
 
-    To start from scratch
+## Author
 
-    `npm install ethers axios web3modal @walletconnect/web3-provider`
-
-    Update the code in `index.js` as per the requirement.
-
-    
-    To simulate the exisiting one:
-
-    Clone the repo.
-
-    Run `npm i` and `npm run dev`
+Etim Paul E.
 
 
-- To connect your own contract
+## License
 
-    Update the `/next.config.js` env variables `CONTRACT_ADDRESS` and `ABI`
+This project is licensed under the MIT License - see the LICENSE.md file for details
